@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autre</title>
+    <style>
+        .container{
+            width: 500px;
+            min-height: 400px;
+            background: rgb(255, 0, 234);
+            text-align: center;
+            margin: 0 auto;
+        }
+        .ff{
+            font-size: 2rem;
+            border: none;
+            background: none;
+            margin: 40px 0 20px;
+            outline: none;
+            text-align: center;
+
+        }
+        .input-container{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+
+            
+        }
+        #input-rang-length{
+            background: none;
+            border: none;
+            font-size: 40px;
+            margin: 0 20px;
+            outline: none;
+        }
+        .checkbox-container label{
+            color: black;
+            background: white;
+            padding: 8px 10px;
+            border-radius: 5px;
+            font-size: 22px;
+        }
+        input[type="checkbox"]:checked + label {
+            /* transform: scale(2); */
+            background: rgba(230, 227, 221, 0.945);
+
+        }
+        #btn{
+            margin-top: 40px;
+            background: #CCC;
+            border: none;
+            font-weight: 900;
+            font-size: 2rem;
+            padding: 7px 20px;
+            border-radius: 10px;
+            transition: .3s ease-in-out;
+        }
+        #btn:hover{
+            background: #1ab327;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input class="ff" id="gdmp" type="text" value="Générateur de MDP" readonly>
+
+        <div class="input-container">
+            <input type="range" min="4" max="25" id="inputConect" oninput="document.getElementById('input-rang-length').value=this.value" value="8">
+            <input id="input-rang-length" type="text" value="8" readonly>
+        </div>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="lowercase" checked>
+            <label for="lowercase">A-Z</label>
+
+            <input type="checkbox" id="uppercase">
+            <label for="uppercase">a-z</label>
+
+            <input type="checkbox" id="number">
+            <label for="number">0-9</label>
+            
+            <input type="checkbox" id="simbols">
+            <label for="simbols">!-?</label>
+        </div>
+        <button id="btn">Password generator</button>
+    </div>
+    <!-- <input type="text"> -->
+
+    <script src="password.js"></script>
+</body>
+</html>
